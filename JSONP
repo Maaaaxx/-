@@ -1,0 +1,24 @@
+<body>
+    <button class="btn">chick me</button>
+
+
+
+    <script>
+    
+        var btn = document.querySelector('.btn')
+
+        btn.addEventListener('click',function(){
+
+            var loadData = document.createElement('script')
+            loadData.src = 'http://localhost:8080/jsonp?callback=showData'
+            document.head.appendChild(loadData)
+        })
+
+        function showData(data){
+            console.log(data)
+        }
+
+
+
+    </script>
+</body>
